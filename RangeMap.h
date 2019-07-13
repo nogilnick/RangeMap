@@ -51,8 +51,7 @@ public:
         std::sort(SS.begin(), SS.end(), [&S](size_t i1, size_t i2) { return S[i1] < S[i2]; });
         std::sort(SE.begin(), SE.end(), [&E](size_t i1, size_t i2) { return E[i1] < E[i2]; });
         // Clear and reserve space
-        Tab.clear();
-        IList.clear();
+        Clear();
         Tab.reserve(NF * 2 + 2);     // 1 for each start/end + 2 for -inf and +inf
         IList.reserve(NF * 2 + 2);   // 1 element for each above
         constexpr T MINV = std::numeric_limits<T>::has_infinity ? NEG_INFTY : std::numeric_limits<T>::min();
