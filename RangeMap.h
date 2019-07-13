@@ -86,6 +86,12 @@ public:
         }
     }
 
+    // Clears all elements from the range map
+    void Clear() {
+        Tab.clear();
+        IList.clear();
+    }
+
     /* Given a query point, returns all intervals containing the point
      * p:       The query point
      * Return:  A vector of all intervals containing the point */
